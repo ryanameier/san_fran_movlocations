@@ -15,11 +15,11 @@ module SanFranMovlocations
 
     def self.all? 
       locations_array = Unirest.get("http://data.sfgov.org/resource/wwmu-gmzc.json").body
-      location = []
+      locations = []
       locations_array.each do |location_hash|
             locations << Location.new(location_hash)
           end
-          return location
+          return locations
     end
   end
 end
