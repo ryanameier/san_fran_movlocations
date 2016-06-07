@@ -4,7 +4,7 @@ require 'unirest'
 module SanFranMovlocations
   class Location
 
-    attr_reader :location, :title, :actor_1, :actor_2
+    attr_reader :locations, :title, :actor_1, :actor_2
 
     def initialize(hash)
       @location = hash["locations"]
