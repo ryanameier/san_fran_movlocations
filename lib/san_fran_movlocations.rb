@@ -13,7 +13,7 @@ module SanFranMovlocations
       @actor_2 = hash["actor_2"]
     end
 
-    def self.all? 
+    def self.all 
       locations_array = Unirest.get("http://data.sfgov.org/resource/wwmu-gmzc.json").body
       locations = []
       locations_array.each do |location_hash|
