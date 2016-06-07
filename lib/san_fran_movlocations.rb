@@ -1,4 +1,5 @@
 require "san_fran_movlocations/version"
+require 'unirest'
 
 module SanFranMovlocations
   class Location
@@ -18,8 +19,7 @@ module SanFranMovlocations
       locations_array.each do |location_hash|
             locations << Location.new(location_hash)
           end
-          return locations
-      end
+          return location
     end
   end
 end
